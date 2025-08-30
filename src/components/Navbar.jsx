@@ -1,12 +1,14 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 export default function Navbar() {
   const logoUrl = import.meta.env.BASE_URL + 'logo.png'
   return (
     <div className="brand-and-nav">
       <div className="nav-left">
-        <img className="logo" src={logoUrl} alt="MUTF logo" />
+        <Link to="/">
+          <img className="logo" src={logoUrl} alt="MUTF logo" />
+        </Link>
       </div>
 
       <div className="nav-center">
@@ -14,9 +16,6 @@ export default function Navbar() {
       </div>
 
       <nav className="nav nav-right">
-        <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-          Home
-        </NavLink>
         <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
           About
         </NavLink>
