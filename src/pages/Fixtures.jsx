@@ -18,35 +18,6 @@ export default function Fixtures() {
   const [activeTab, setActiveTab] = React.useState(Object.keys(demoData)[0])
   const [fixtures, setFixtures] = React.useState(demoData)
 
-  const onUploadCsv = (file) => {
-    if (!file) return
-    Papa.parse(file, {
-      header: true,
-      skipEmptyLines: true,
-      complete: (results) => {
-        // Expect headers: division, date, time, field, opposition
-        const next = {}
-        for (const row of results.data) {
-          const division = row.division?.trim() || 'Unassigned'
-          if (!next[division]) next[division] = []
-          next[division].push({
-            date: row.date?.trim() || '',
-            time: row.time?.trim() || '',
-            field: row.field?.trim() || '',
-            opposition: row.opposition?.trim() || '',
-          })
-        }
-        setFixtures(next)
-        const firstKey = Object.keys(next)[0]
-        if (firstKey) setActiveTab(firstKey)
-      },
-      error: (err) => {
-        console.error('CSV parse error', err)
-        alert('Failed to parse CSV. Please check the format.')
-      },
-    })
-  }
-
   const divisions = Object.keys(fixtures)
   const rows = fixtures[activeTab] || []
 
@@ -56,20 +27,7 @@ export default function Fixtures() {
         <div className="card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <h2 className="section-title" style={{ marginBottom: 0 }}>Fixtures</h2>
-            <label className="btn" style={{ cursor: 'pointer' }}>
-              Upload CSV
-              <input
-                type="file"
-                accept=".csv"
-                onChange={(e) => onUploadCsv(e.target.files?.[0])}
-                style={{ display: 'none' }}
-              />
-            </label>
           </div>
-
-          <p className="muted" style={{ marginTop: 8 }}>
-            Expected CSV headers: division, date, time, field, opposition
-          </p>
 
           <div className="tabs">
             {divisions.map((d) => (

@@ -55,19 +55,13 @@ export default function About() {
               <CommitteeMember key={m.role} role={m.role} name={m.name} photoSrc={m.photo} />
             ))}
           </div>
-
-          <p className="muted" style={{ marginTop: 16 }}>
-            To add names, open <code>src/pages/About.jsx</code> and fill the <code>name</code> fields in
-            <code>executiveMembers</code> and <code>nonExecutiveMembers</code>. Place photos in
-            <code>public/ExecPhotos</code> and <code>public/NonExecPhotos</code> and update the filenames if needed.
-          </p>
         </div>
       </div>
 
       <div className="section">
         <div className="card">
           <h2 className="section-title">Contact</h2>
-          <p>Email: <a href="mailto:operations@mutouchfootball.com">operations@mutouchfootball.com</a></p>
+          <p>Email: <a href="mailto:info@mutf.org.au">info@mutf.org.au</a></p>
           <p>
             Socials: <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a> ·{' '}
             <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
