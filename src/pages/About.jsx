@@ -61,10 +61,10 @@ export default function About() {
       <div className="section">
         <div className="card">
           <h2 className="section-title">Contact</h2>
-          <p>Email: <a href="mailto:info@mutf.org.au">info@mutf.org.au</a></p>
+          <p>Email: <a href="mailto:operations@mutouchfootball.com">operations@mutouchfootball.com</a></p>
           <p>
-            Socials: <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a> ·{' '}
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+            Socials: <a href="https://www.facebook.com/search/top?q=melbourne%20university%20touch%20football" target="_blank" rel="noreferrer">Facebook</a> ·{' '}
+            <a href="https://www.instagram.com/melbunitouch/" target="_blank" rel="noreferrer">Instagram</a>
           </p>
         </div>
       </div>

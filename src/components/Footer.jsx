@@ -10,12 +10,12 @@ export default function Footer() {
         </div>
         <div className="col-4" style={{ textAlign: 'right' }}>
           <div>
-            <a href="mailto:info@mutf.org.au">info@mutf.org.au</a>
+            <a href="mailto:operations@mutouchfootball.com">operations@mutouchfootball.com</a>
           </div>
           <div>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+            <a href="https://www.facebook.com/search/top?q=melbourne%20university%20touch%20football" target="_blank" rel="noreferrer">Facebook</a>
             {' · '}
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.instagram.com/melbunitouch/" target="_blank" rel="noreferrer">Instagram</a>
           </div>
         </div>
       </div>
