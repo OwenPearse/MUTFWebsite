@@ -2,10 +2,11 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
+  const logoUrl = import.meta.env.BASE_URL + 'logo.png'
   return (
     <div className="brand-and-nav">
       <div className="nav-left">
-        <img className="logo" src="/logo.png" alt="MUTF logo" />
+        <img className="logo" src={logoUrl} alt="MUTF logo" />
       </div>
 
       <div className="nav-center">

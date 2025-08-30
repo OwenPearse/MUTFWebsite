@@ -1,24 +1,26 @@
 import React from 'react'
 import CommitteeMember from '../components/CommitteeMember.jsx'
 
+const base = import.meta.env.BASE_URL
+
 const executiveMembers = [
-  { role: 'President', name: 'Millie Davis', photo: '/ExecPhotos/President.png' },
-  { role: 'Vice President', name: 'Owen Pearse', photo: '/ExecPhotos/VicePresident.png' },
-  { role: 'Secretary', name: 'Allie Harland', photo: '/ExecPhotos/Secretary.png' },
-  { role: 'Treasurer', name: 'Kitty Smyth', photo: '/ExecPhotos/Treasurer.png' },
+  { role: 'President', name: 'Millie Davis', photo: base + 'ExecPhotos/President.png' },
+  { role: 'Vice President', name: 'Owen Pearse', photo: base + 'ExecPhotos/VicePresident.png' },
+  { role: 'Secretary', name: 'Allie Harland', photo: base + 'ExecPhotos/Secretary.png' },
+  { role: 'Treasurer', name: 'Kitty Smyth', photo: base + 'ExecPhotos/Treasurer.png' },
 ]
 
 const nonExecutiveMembers = [
-  { role: 'All Abilities Program', name: 'Ged Moriarty', photo: '/NonExecPhotos/AllAbilities.png' },
-  { role: 'Junior Program', name: 'Lily Scmhidlechner', photo: '/NonExecPhotos/Juniors.png' },
-  { role: 'Social Media', name: 'Freya Henriksen', photo: '/NonExecPhotos/SocialMedia.png' },
-  { role: 'MPIO', name: 'Tayla Fox', photo: '/NonExecPhotos/MPIO.png' },
-  { role: 'Coaching Program', name: 'Mick Lovett', photo: '/NonExecPhotos/Coaching.png' },
-  { role: 'Referee Program', name: 'Summer Nelson', photo: '/NonExecPhotos/Referee.png' },
-  { role: 'University Program', name: 'Hubert Lin', photo: '/NonExecPhotos/University.png' },
-  { role: 'Representative Program', name: 'Peter Stulpner', photo: '/NonExecPhotos/Representative.png' },
-  { role: 'Club Competition', name: 'Avena Henriksen & Jess Hooker', photo: '/NonExecPhotos/ClubComp.png' },
-  { role: 'Tournaments', name: 'Georgia Weston', photo: '/NonExecPhotos/Tournaments.png' },
+  { role: 'All Abilities Program', name: 'Ged Moriarty', photo: base + 'NonExecPhotos/AllAbilities.png' },
+  { role: 'Junior Program', name: 'Lily Scmhidlechner', photo: base + 'NonExecPhotos/Juniors.png' },
+  { role: 'Social Media', name: 'Freya Henriksen', photo: base + 'NonExecPhotos/SocialMedia.png' },
+  { role: 'MPIO', name: 'Tayla Fox', photo: base + 'NonExecPhotos/MPIO.png' },
+  { role: 'Coaching Program', name: 'Mick Lovett', photo: base + 'NonExecPhotos/Coaching.png' },
+  { role: 'Referee Program', name: 'Summer Nelson', photo: base + 'NonExecPhotos/Referee.png' },
+  { role: 'University Program', name: 'Hubert Lin', photo: base + 'NonExecPhotos/University.png' },
+  { role: 'Representative Program', name: 'Peter Stulpner', photo: base + 'NonExecPhotos/Representative.png' },
+  { role: 'Club Competition', name: 'Avena Henriksen & Jess Hooker', photo: base + 'NonExecPhotos/ClubComp.png' },
+  { role: 'Tournaments', name: 'Georgia Weston', photo: base + 'NonExecPhotos/Tournaments.png' },
 ]
 
 export default function About() {
@@ -65,7 +67,7 @@ export default function About() {
       <div className="section">
         <div className="card">
           <h2 className="section-title">Contact</h2>
-          <p>Email: <a href="mailto:info@mutf.org.au">info@mutf.org.au</a></p>
+          <p>Email: <a href="mailto:operations@mutouchfootball.com">operations@mutouchfootball.com</a></p>
           <p>
             Socials: <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a> ·{' '}
             <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
